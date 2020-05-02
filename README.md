@@ -1,7 +1,17 @@
 # Projeto RubyPoll
 
-Enquente simples em formato de API# Projeto RubyPoll
+#### requirements
+- docker
+  
+- fill the variables in the .env-example (move this one to .env)
 
-Enquente simples em formato de API# Projeto RubyPoll
+### commands
 
-Enquente simples em formato de API
+- build `make bu`
+
+- up the conatiner `make up`
+
+- (in another terminal tab) install the Gem `make ug`
+
+- create the database `make dba` 
+

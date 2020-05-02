@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2020_05_02_194241) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "options", force: :cascade do |t|
     t.text "description"
-    t.integer "poll_id", null: false
+    t.bigint "poll_id", null: false
     t.integer "votes", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
