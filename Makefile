@@ -17,3 +17,6 @@ cs:
 
 dw:
 	docker-compose down -v
+
+ter:
+	docker exec -ti rubypoll_web_1 /bin/bash
