@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 
 bu:
-	docker-compose build web
+	docker-compose build --build
 
 ug:
 	docker-compose run --rm web bundle
@@ -16,7 +16,7 @@ cs:
 	docker-compose exec web rails console
 
 dw:
-	docker-compose down -v
+	docker-compose down
 
 ter:
 	docker exec -ti rubypoll_web_1 /bin/bash
