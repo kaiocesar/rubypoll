@@ -10,10 +10,10 @@ dba:
 	docker-compose run web rake db:create db:migrate
 
 up:
-	docker-compose up
+	docker-compose up --build
 
 cs:
 	docker-compose exec web rails console
 
 dw:
-	docker-compose down
+	docker-compose down -v

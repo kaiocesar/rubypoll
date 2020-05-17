@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :polls, only: %i[index, show, create]
+  get '/poll/:id/stats', to: 'polls#stats'
+  post '/poll/:id/vote', to: 'polls#vote'
 end
