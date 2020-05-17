@@ -1,4 +1,4 @@
-class Api::V1::PollsController < ApplicationController
+class PollsController < ApplicationController
     def index
     end
 
