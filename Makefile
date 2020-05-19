@@ -20,3 +20,6 @@ dw:
 
 ter:
 	docker exec -ti rubypoll_web_1 /bin/bash
+
+deletepid:
+	rm tmp/pids/server.pid 
