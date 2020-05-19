@@ -1,6 +1,10 @@
-FROM ruby:2.6.3-alpine
+FROM ruby:2.7.1-alpine
 
-RUN apk add --update --no-cache bash build-base nodejs sqlite-dev tzdata postgresql-dev yarn
+RUN apk add --update --no-cache \
+      bash binutils-gold build-base \
+      curl file g++ gcc libstdc++ libffi-dev \
+      libc-dev linux-headers libxml2-dev libgcrypt-dev \
+      make netcat-openbsd pkgconfig python nodejs sqlite-dev tzdata postgresql-dev yarn
 
 RUN gem install bundler:2
 
