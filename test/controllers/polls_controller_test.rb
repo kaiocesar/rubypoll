@@ -2,18 +2,6 @@ require 'test_helper'
 require 'json'
 
 class PollsControllerTest < ActionDispatch::IntegrationTest
-  test "should create a poll" do
-    expected_response = {"poll_id": 2}
-    post '/poll',
-      params: {"poll_description": "This is the description", "options": [
-        "First option",
-        "Second Option",
-        "Third Option"
-      ]}
-    assert_response :success
-    assert_equal expected_response.to_json , @response.body
-  end
-  
   test "should get a poll" do
     poll_expected = {
       "poll_id": 1,
@@ -27,6 +15,18 @@ class PollsControllerTest < ActionDispatch::IntegrationTest
     get '/poll/1'
     assert_response :success
     assert_equal poll_expected.to_json, @response.body
+  end
+
+  test "should create a poll" do
+    expected_response = {"poll_id": 2}
+    post '/poll',
+      params: {"poll_description": "This is the description", "options": [
+        "First option",
+        "Second Option",
+        "Third Option"
+      ]}
+    assert_response :success
+    assert_equal expected_response.to_json , @response.body
   end
 
   test "should get poll stats" do
