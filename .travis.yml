@@ -6,9 +6,7 @@ rvm:
         - "2.6.3"
 services:
         - docker
-before_script:
-        - gem install bundler
 
 scripts:
-        - rubocop
+        - rails t
 
