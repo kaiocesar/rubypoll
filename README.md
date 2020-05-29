@@ -15,3 +15,6 @@
 
 - create the database `make dba` 
 
+
+#### CI
+[![Build Status](https://travis-ci.org/kaiocesar/rubypoll.svg?branch=master)](https://travis-ci.org/kaiocesar/rubypoll)
