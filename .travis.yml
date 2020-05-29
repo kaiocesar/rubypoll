@@ -1,9 +1,13 @@
 language: ruby
+
+dist: trusty
+
 rvm:
-        - "2.6"
+        - "2.6.5"
 services:
         - docker
-before_script: bundle install
+before_script:
+        - gem install bundler
 
 scripts:
         - rubocop
